@@ -1,0 +1,120 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+    padding: 10px;
+}
+
+.heading {
+    display: flex;
+    gap: 10px;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.heading button {
+    flex-shrink: 0;
+}
+
+.fun {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+/* The screen element should remain fixed, and only the txt element moves */
+.screen {
+    border: 2px solid black;
+    width: 80vw;
+    height: 80vh;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;  
+    max-width: 1000px;
+    max-height: 700px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt {
+    position: absolute;  
+    padding: 10px;
+    border: 1px solid #a3e2a3;
+    background-color: #fff;
+    cursor: move;
+    min-width: 100px;
+    min-height: 30px;
+    resize: both;
+    overflow: auto;
+    user-select: none;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+
+.txt[contenteditable="true"]:empty::before {
+    content: "Enter text here...";
+    color: #aaa;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.btn,
+.pagination input,
+.pagination .page-link {
+    height: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 15px;
+    min-width: 50px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+}
+
+.pagination input {
+    width: 60px;
+    text-align: center;
+}
+
+.pagination .page-item button {
+    width: 30px;
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
